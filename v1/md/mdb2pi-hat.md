@@ -2,7 +2,7 @@
 ---
 name: MDB2Pi HAT
 class: board
-type: IO,Power
+type: io,power
 formfactor: HAT
 manufacturer: Abrantix
 collected: Other
@@ -32,9 +32,9 @@ pin:
   '5':
     mode: i2c
   '8':
-    mode: UART
+    mode: uart
   '10':
-    mode: UART
+    mode: uart
   '27':
     mode: i2c
   '28':
