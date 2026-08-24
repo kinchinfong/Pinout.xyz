@@ -46,16 +46,16 @@ pin:
   '33':
     name: Piezo
   '26':
-    mode: spi
+    mode: SPI
     name: Chip-select
   '32':
     name: Backlight
   '21':
     name: Data/Command
   '19':
-    mode: spi
+    mode: SPI
   '23':
-    mode: spi
+    mode: SPI
   '29':
     name: Button A
   '31':
@@ -65,7 +65,7 @@ pin:
   '18':
     name: Button Y
 i2c:
-  '0x23':
+  0x23:
     device: LTR559
 -->
 # Grow HAT Mini

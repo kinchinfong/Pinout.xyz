@@ -29,11 +29,11 @@ ground:
 pin:
   '8':
     name: TxD
-    mode: uart
+    mode: UART
     description: Serial TX > MDB Controller
   '10':
     name: RxD
-    mode: uart
+    mode: UART
     description: Serial RX < MDB Controller
   '19':
     name: SPI_MOSI
@@ -53,11 +53,11 @@ pin:
     description: MDB Controller – CS
   '27':
     name: ID_SD
-    mode: i2c
+    mode: I2C
     description: ID EEPROM DTA
   '28':
     name: ID_SC
-    mode: i2c
+    mode: I2C
     description: ID EEPROM CLK
   '29':
     name: IO2RPI
@@ -66,7 +66,7 @@ pin:
   '31':
     name: MDB_RES
     mode: input
-    description: MDB Controller Reset
+    description: MDB Contoller Reset
   '33':
     name: IOfromRPi
     mode: input

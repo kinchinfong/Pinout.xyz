@@ -27,9 +27,9 @@ pin:
   '7':
     name: PPS
   '8':
-    mode: uart
+    mode: UART
   '10':
-    mode: uart
+    mode: UART
 -->
 # Ultimate GPS HAT
 

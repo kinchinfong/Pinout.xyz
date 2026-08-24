@@ -38,7 +38,7 @@ pin:
     mode: output
   '8':
     name: TXD
-    mode: uart
+    mode: other
 i2c:
   '0x68':
     name: DS1307

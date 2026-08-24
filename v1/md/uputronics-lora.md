@@ -2,7 +2,7 @@
 ---
 name: Uputronics LoRa Expansion Board
 class: board
-type: radio
+type: Radio
 formfactor: HAT
 manufacturer: Uputronics
 description: LoRa Radio board for Raspberry Pi
@@ -26,15 +26,13 @@ ground:
   '39':
 pin:
   '18':
-    name: CE0/DIO5
+    mode: CE0/DIO5
   '22':
-    name: CE0/DIO0
+    mode: CE0/DIO0
   '24':
-    name: CE0/NSS
-    mode: chipselect
+    mode: CE0/NSS
   '26':
-    name: CE1/NSS
-    mode: chipselect
+    mode: CE1/NSS
   '32':
     name: CE1/DIO5
   '36':
@@ -43,13 +41,10 @@ pin:
     name: CE1/DATA LED
   '19':
     name: MOSI
-    mode: spi
   '21':
     name: MISO
-    mode: spi
   '23':
     name: SCLK
-    mode: spi
   '29':
     name: CE0/DATA LED
   '31':

@@ -3,7 +3,7 @@
 name: RASPIAUDIO AUDIO+
 class: board
 type: audio
-formfactor: pHAT
+formfactor: phat
 manufacturer: RASPIAUDIO
 description: An I2S digital to analog audio converter
 buy: https://raspiaudio.com

@@ -37,10 +37,10 @@ pin:
     name: PHY_MDIO
   '13':
     name: FPGA_Interrupt
-    direction: input
+    direction: Input
   '15':
     name: Buffer_Full
-    direction: input
+    direction: Input
   '19':
     mode: spi
   '21':

@@ -4,7 +4,7 @@
     <title>pHAT Stack Configurator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link href="https://pinout.xyz/resources/pinout.css?v=20251207v2" rel="stylesheet">
+    <link href="https://pinout.xyz/resources/pinout.scss.css?v=20251207v2" rel="stylesheet">
     <style type="text/css">
     body {
         font-family: 'Roboto Slab', sans-serif;
@@ -283,19 +283,6 @@
         width: 144px;
     }
 
-    #gpio .bottom a {
-        padding-right: 0;
-    }
-
-    #gpio .top a {
-        padding-left: 0;
-        text-indent: 36px;
-    }
-
-    #gpio .pin {
-        padding: 0;
-    }
-
     #gpio .clash-pin a, #gpio .clash-pin a:hover {
         color: #fff;
         background: #DC322F;
@@ -344,12 +331,12 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <h1 class="logo">
             <a title="Raspberry Pi GPIO Pinout home" href="https://pinout.xyz/">
-                <img src="/resources/pinout-logo.png" alt="Pinout Logo">
+                <img src="/resources/pinout-logo.png">
                 Raspberry Pi Pinout
             </a>
-        </div>
+        </h1>
         <div class="title">
             <h2>pHAT Stack Configurator</h2>
             <p>
@@ -734,7 +721,7 @@
         <div class="phatstack">
             <div class="slot empty">
                 <div class="img">
-                    <img src="https://pinout.xyz/phatstack" alt=""/>
+                    <img src="https://pinout.xyz/phatstack"/>
                 </div>
                 <div class="details">
                     <select class="choice"></select>
@@ -743,7 +730,7 @@
             </div>
             <div class="slot empty">
                 <div class="img">
-                    <img src="https://pinout.xyz/phatstack" alt=""/>
+                    <img src="https://pinout.xyz/phatstack"/>
                 </div>
                 <div class="details">
                     <select class="choice"></select>
@@ -752,7 +739,7 @@
             </div>
             <div class="slot empty">
                 <div class="img">
-                    <img src="https://pinout.xyz/phatstack" alt=""/>
+                    <img src="https://pinout.xyz/phatstack"/>
                 </div>
                 <div class="details">
                     <select class="choice"></select>
@@ -761,7 +748,7 @@
             </div>
             <div class="slot empty">
                 <div class="img">
-                    <img src="https://pinout.xyz/phatstack" alt=""/>
+                    <img src="https://pinout.xyz/phatstack"/>
                 </div>
                 <div class="details">
                     <select class="choice"></select>
@@ -770,7 +757,7 @@
             </div>
             <div class="slot empty">
                 <div class="img">
-                    <img src="https://pinout.xyz/phatstack" alt=""/>
+                    <img src="https://pinout.xyz/phatstack"/>
                 </div>
                 <div class="details">
                     <select class="choice"></select>
@@ -10974,7 +10961,7 @@
         "class": "board",
         "type": "other",
         "formfactor": "Custom",
-        "manufacturer": "Parser",
+        "manufacturer": "Paser",
         "collected": "Other",
         "description": "add-on board designed to interface with car electronics",
         "url": "http://www.carberry.it/en/p/347/Carberry/",
@@ -11735,7 +11722,7 @@
             "31": {
                 "name": "MDB_RES",
                 "mode": "input",
-                "description": "MDB Controller Reset"
+                "description": "MDB Contoller Reset"
             },
             "33": {
                 "name": "IOfromRPi",

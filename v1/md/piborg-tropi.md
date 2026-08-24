@@ -2,8 +2,8 @@
 ---
 name: TroPi
 class: board
-type: led
-formfactor: pHAT
+type: LED
+formfactor: PHAT
 manufacturer: PiBorg
 description: A five LED add on board.
 url: https://www.piborg.org/tropi

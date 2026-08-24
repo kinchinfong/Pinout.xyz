@@ -2,7 +2,7 @@
 ---
 name: IoT LoRa Node pHAT
 class: board
-type: iot, radio, lora
+type: IOT, Radio, LoRa
 formfactor: pHAT
 manufacturer: Pi Supply
 description: A LoRa Node pHAT providing LoRaWAN functionality for your Raspberry Pi

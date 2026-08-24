@@ -8,91 +8,77 @@ url: http://elinux.org/RPi_Serial_Connection
 pincount: 18
 pin:
   '8':
-    name: UART0 TXD
+    name: TXD / Transmit
     direction: output
     active: high
   '10':
-    name: UART0 RXD
+    name: RXD / Receive
     direction: input
     active: high
   '36':
-    name: UART0 CTS
+    name: CTS / Clear to Send
     direction: both
     active: high
   '11':
-    name: UART0 RTS
+    name: RTS / Request to Send
     direction: both
     active: high
   '27':
-    name: UART2 TXD
+    name: TXD / Transmit
     direction: output
     active: high
-    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '28':
-    name: UART2 RXD
+    name: RXD / Receive
     direction: input
     active: high
-    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '3':
-    name: UART2 CTS
+    name: CTS / Clear to Send
     direction: both
     active: high
-    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '5':
-    name: UART2 RTS
+    name: RTS / Request to Send
     direction: both
     active: high
-    supported: Pi 4 (UART2) and Pi 5 (UART1)
   '7':
-    name: UART3 TXD
+    name: TXD / Transmit
     direction: output
     active: high
-    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '29':
-    name: UART3 RXD
+    name: RXD / Receive
     direction: input
     active: high
-    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '31':
-    name: UART3 CTS
+    name: CTS / Clear to Send
     direction: both
     active: high
-    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '26':
-    name: UART3 RTS
+    name: RTS / Request to Send
     direction: both
     active: high
-    supported: Pi 4 (UART3) and Pi 5 (UART2)
   '24':
-    name: UART4 TXD
+    name: TXD / Transmit
     direction: output
     active: high
-    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '21':
-    name: UART4 RXD
+    name: RXD / Receive
     direction: input
     active: high
-    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '19':
-    name: UART4 CTS
+    name: CTS / Clear to Send
     direction: both
     active: high
-    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '23':
-    name: UART4 RTS
+    name: RTS / Request to Send
     direction: both
     active: high
-    supported: Pi 4 (UART4) and Pi 5 (UART3)
   '32':
-    name: UART5 TXD
+    name: TXD / Transmit
     direction: output
     active: high
-    supported: Pi 4 (UART5) and Pi 5 (UART4)
   '33':
-    name: UART5 RXD
+    name: RXD / Receive
     direction: input
     active: high
-    supported: Pi 4 (UART5) and Pi 5 (UART4)
 -->
 # UART - Universal Asynchronous Receiver/Transmitter
 
@@ -101,24 +87,21 @@ pin:
 
 UART is an asynchronous serial communication protocol, meaning that it takes bytes of data and transmits the individual bits in a sequential fashion.
 
-* TXD - Transmit
-* RXD - Receive
-* CTS - Clear to send
-* RTS - Request to send
-
 Asynchronous transmission allows data to be transmitted without the sender having to send a clock signal to the receiver. Instead, the sender and receiver agree on timing parameters in advance and special bits called 'start bits' are added to each word and used to synchronize the sending and receiving units.
 
 UART is commonly used on the Pi as a convenient way to control it over the GPIO, or access the kernel boot messages from the serial console (enabled by default).
 
 It can also be used as a way to interface an Arduino, bootloaded ATmega, ESP8266, etc with your Pi. Be careful with logic-levels between the devices though, for example the Pi is 3.3v and the Arduino is 5v. Connect the two and you might conjure up some magic blue smoke.
 
-Only uart0, on GPIO 14 and GPIO 15, is enabled by default. On Pi 4 and earlier the mini UART (uart1) shares those pins with uart0 and becomes `/dev/serial0` if the Bluetooth module claims the full UART.
+Raspberry Pi 2/3 have two UARTs, uart1 and uart0. Raspberry Pi 4 has four additional UARTs available. Only uart0/1 is enabled over GPIO pin 14/15 by default. The additional UARTs can be enabled through the device tree overlays.
 
-Pi 4 and Pi 5 both expose four more UARTs on the header. They use the same pins, but different numbering:
+## Using a UART from WiringPi
 
-* uart2 on Pi 4, uart1 on Pi 5: TXD on GPIO 0, RXD on GPIO 1, CTS on GPIO 2, RTS on GPIO 3
-* uart3 on Pi 4, uart2 on Pi 5: TXD on GPIO 4, RXD on GPIO 5, CTS on GPIO 6, RTS on GPIO 7
-* uart4 on Pi 4, uart3 on Pi 5: TXD on GPIO 8, RXD on GPIO 9, CTS on GPIO 10, RTS on GPIO 11
-* uart5 on Pi 4, uart4 on Pi 5: TXD on GPIO 12, RXD on GPIO 13, CTS on GPIO 14, RTS on GPIO 15
+Assuming you have WiringPi-Python installed, the following python example opens the Pi's UART at 9600baud and puts 'hello world'
 
-These are enabled with a device tree overlay - `dtoverlay=uart2` on Pi 4, `dtoverlay=uart1-pi5` on Pi 5 - and the CTS/RTS pins are enabled with an additional `ctsrts` parameter.
+```python
+import wiringpi
+wiringpi.wiringPiSetup()
+serial = wiringpi.serialOpen('/dev/ttyAMA0',9600)
+wiringpi.serialPuts(serial,'hello world!')
+```

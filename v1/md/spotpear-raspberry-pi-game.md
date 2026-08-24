@@ -61,10 +61,10 @@ pin:
     name: LCD SPI MOSI
   '23':
     name: LCD SPI SCLK
-    mode: spi
+    mode: SPI
   '24':
     name: LCD SPI CS
-    mode: spi
+    mode: SPI
 -->
 # Raspberry Pi Game
 

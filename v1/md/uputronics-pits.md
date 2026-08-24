@@ -2,7 +2,7 @@
 ---
 name: Uputronics Pi In The Sky Board
 class: board
-type: gps,radio
+type: gps,Radio
 formfactor: HAT
 manufacturer: Uputronics
 description: Radio telemetry board for Raspberry Pi
@@ -30,10 +30,9 @@ pin:
   '5':
     mode: i2c
   '8':
-    name: MTX2 TXD
-    mode: uart
+    mode: UART/MTX2 TXD
   '10':
-    mode: uart
+    mode: UART
   '38':
     name: PPS
   '7':

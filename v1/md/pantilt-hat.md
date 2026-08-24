@@ -30,7 +30,7 @@ pin:
   '5':
     mode: i2c
   '36':
-    mode: eeprom_wp
+    mode: EEPROM_WP
 i2c:
   '0x15':
     name: Servo And Light Driver

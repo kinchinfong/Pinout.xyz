@@ -13,7 +13,6 @@ pincount: 40
 eeprom: no
 power:
   '2':
-  '17':
 ground:
   '25':
   '39':
@@ -40,13 +39,13 @@ pin:
     name: LCD Data/Command
   '19':
     name: LCD SPI MOSI
-    mode: spi
+    mode: SPI
   '23':
     name: LCD SPI SCLK
-    mode: spi
+    mode: SPI
   '26':
     name: LCD SPI CS
-    mode: spi
+    mode: SPI
 install:
   'devices':
   - 'i2s'
