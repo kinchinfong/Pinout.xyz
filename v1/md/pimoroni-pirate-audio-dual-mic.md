@@ -13,24 +13,23 @@ pincount: 40
 eeprom: no
 power:
   '2':
+  '17':
 ground:
   '25':
   '39':
 pin:
   '12':
-    name: I2S
+    name: I2S BCLK
   '35':
-    name: I2S
+    name: I2S LRCLK
   '38':
-    name: I2S
+    name: I2S SDIN
   '29':
     name: Button A
   '31':
     name: Button B
   '36':
     name: Button X
-  '38':
-    name: Button Y
   '18':
     name: Button Y
   '33':
@@ -39,13 +38,13 @@ pin:
     name: LCD Data/Command
   '19':
     name: LCD SPI MOSI
-    mode: SPI
+    mode: spi
   '23':
     name: LCD SPI SCLK
-    mode: SPI
+    mode: spi
   '26':
     name: LCD SPI CS
-    mode: SPI
+    mode: spi
 install:
   'devices':
   - 'i2s'

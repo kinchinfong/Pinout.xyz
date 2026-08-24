@@ -3,7 +3,7 @@
 name: Inky Impression
 class: board
 type: display
-formfactor: custom
+formfactor: Custom
 manufacturer: Pimoroni
 description: A 7-colour e-paper display for your Raspberry Pi
 url: https://shop.pimoroni.com/products/inky-impression
@@ -48,8 +48,16 @@ pin:
     mode: i2c
   '5':
     mode: i2c
+  '29':
+    name: Button A
+  '31':
+    name: Button B
+  '36':
+    name: Button C
+  '18':
+    name: Button D
 i2c:
-  0x50:
+  '0x50':
     device: Inky ID EEPROM
 -->
 # Inky Impression

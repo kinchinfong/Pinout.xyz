@@ -3,18 +3,22 @@
 ---
 name: OLED Bonnet
 class: board
-type: Display
+type: display
 formfactor: pHAT
 manufacturer: Adafruit
 description: A 128x64 display with jostick and buttons for your Pi
 url: https://learn.adafruit.com/adafruit-128x64-oled-bonnet-for-raspberry-pi
 github: https://github.com/adafruit/Adafruit_Python_SSD1306
+schematic: https://learn.adafruit.com/assets/42397
 buy: https://www.adafruit.com/product/3531
 image: 'adafruit-oled-bonnet.png'
 pincount: 40
 eeprom: no
 power:
   '1':
+  '2':
+  '4':
+  '17':
 ground:
   '6':
   '9':
